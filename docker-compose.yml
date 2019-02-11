@@ -1,0 +1,9 @@
+version: '3'
+services:
+  daemon:
+    image: "arm32v6/znc"
+    volumes:
+      - ${BOUNCER_VOLUME_DATA:-./volumes/data}:/znc-data
+      - ${BOUNCER_VOLUME_LOGS:-./volumes/logs}:/znc-data/moddata/log
+    ports:
+      - ${BOUNCER_PORT:-6697}:6697
