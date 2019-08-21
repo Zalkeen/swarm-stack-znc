@@ -1,7 +1,7 @@
 version: '3'
 services:
   daemon:
-    image: "arm32v6/znc"
+    image: "arm32v6/znc:${BOUNCER_ZNC_VERSION:-latest}"
     volumes:
       - ${BOUNCER_VOLUME_DATA:-./volumes/data}:/znc-data
       - ${BOUNCER_VOLUME_LOGS:-./volumes/logs}:/znc-data/moddata/log
